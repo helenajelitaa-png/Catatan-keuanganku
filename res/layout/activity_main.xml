@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvSapaan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvPeringatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#D32F2F"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/etKeterangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Keterangan (contoh: makan siang)"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etNominal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nominal (angka saja)"
+        android:inputType="number" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbMasuk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pemasukan" />
+
+        <RadioButton
+            android:id="@+id/rbKeluar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:checked="true"
+            android:text="Pengeluaran" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnTambah"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tambah" />
+
+        <Button
+            android:id="@+id/btnPengaturan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="Pengaturan" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvTransaksi"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1" />
+</LinearLayout>
